@@ -29,7 +29,7 @@
 import UIKit
 
 private let colorPickerThumbViewDiameter: CGFloat = 30
-private let defaultWideBorderWidth: CGFloat = 1
+private let defaultWideBorderWidth: CGFloat = 0.5
 private let defaultExpandedUpscaleRatio: CGFloat = 1.6
 private let expansionAnimationDuration = 0.3
 private let collapsingAnimationDelay = 0.1
@@ -96,7 +96,8 @@ open class ColorPickerThumbView: UIViewWithCommonInit {
         addAutolayoutFillingSubview(colorView, edgeInsets: UIEdgeInsets(top: wideBorderWidth, left: wideBorderWidth, bottom: wideBorderWidth, right: wideBorderWidth))
         addAutolayoutCentredView(percentageLabel)
         borderView.viewBorderColor = UIColor.colorPickerBorderColor
-        borderView.borderWidth = 1 / UIScreen.main.scale
+//        borderView.borderWidth = 1 / UIScreen.main.scale
+        borderView.borderWidth = 1
         percentageLabel.font = percentageTextFont
         percentageLabel.textColor = UIColor.colorPickerLabelTextColor
         percentageLabel.textAlignment = .center
