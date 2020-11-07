@@ -26,7 +26,7 @@
 //  SOFTWARE.
 //
 
-import FlexColorPicker
+import UIKit
 
 struct HueColorSliderDelegate: ColorSliderDelegate {
     public func modifiedColor(from color: HSBColor, with value: CGFloat) -> HSBColor {

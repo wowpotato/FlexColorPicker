@@ -26,7 +26,7 @@
 //  SOFTWARE.
 //
 
-import FlexColorPicker
+import UIKit
 
 class CustomControlsDemoViewController: CustomColorPickerViewController {
     @IBOutlet weak var hueSlider: HueUISliderColorControl! {

@@ -27,7 +27,6 @@
 //
 
 import UIKit
-import FlexColorPicker
 
 let radialHuePaletteStripWidth: CGFloat = 28
 

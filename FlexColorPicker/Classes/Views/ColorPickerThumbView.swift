@@ -28,8 +28,8 @@
 
 import UIKit
 
-private let colorPickerThumbViewDiameter: CGFloat = 28
-private let defaultWideBorderWidth: CGFloat = 6
+private let colorPickerThumbViewDiameter: CGFloat = 30
+private let defaultWideBorderWidth: CGFloat = 1
 private let defaultExpandedUpscaleRatio: CGFloat = 1.6
 private let expansionAnimationDuration = 0.3
 private let collapsingAnimationDelay = 0.1
@@ -50,9 +50,9 @@ open class ColorPickerThumbView: UIViewWithCommonInit {
     /// Typically used to show slider percentage or other selected value. See also `showPercentage`.
     public let percentageLabel = UILabel()
     /// When `true` the border automatically darken when color is too bright to be contrast enought with white border.
-    public var autoDarken: Bool = true
+    public var autoDarken: Bool = false
     /// Whether to show percentage label above the thumb view.
-    public var showPercentage: Bool = true
+    public var showPercentage: Bool = false
     /// Whether the thumb view should be expanded when user is interacting with it.
     public var expandOnTap: Bool = true
     var delegate: LimitedGestureViewDelegate? {

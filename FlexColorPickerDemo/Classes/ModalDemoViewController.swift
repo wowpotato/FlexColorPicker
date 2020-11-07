@@ -26,7 +26,7 @@
 //  SOFTWARE.
 //
 
-import FlexColorPicker
+import UIKit
 
 class ModalDemoViewController: DefaultColorPickerViewController {
 

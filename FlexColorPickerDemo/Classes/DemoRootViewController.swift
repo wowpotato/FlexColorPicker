@@ -27,7 +27,6 @@
 //
 
 import UIKit
-import FlexColorPicker
 
 var pickedColor = #colorLiteral(red: 0.6813090444, green: 0.253660053, blue: 1, alpha: 1)
 

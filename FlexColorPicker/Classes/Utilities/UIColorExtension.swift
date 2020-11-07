@@ -51,7 +51,8 @@ extension UIColor {
     
     public static var colorPickerLightBorderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.200000003)
     public static var colorPickerThumbViewWideBorderColor: UIColor {
-      return pickColorForMode(lightModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6999999881), darkModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5995928578))
+//      return pickColorForMode(lightModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6999999881), darkModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5995928578))
+        return pickColorForMode(lightModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), darkModeColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
     }
     
     public static var colorPickerThumbViewWideBorderDarkColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3000000119)

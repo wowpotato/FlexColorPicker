@@ -27,7 +27,6 @@
 //
 
 import UIKit
-import FlexColorPicker
 
 class PickerInTableDemoViewController: UITableViewController {
     @IBOutlet var pickerController: ColorPickerController!

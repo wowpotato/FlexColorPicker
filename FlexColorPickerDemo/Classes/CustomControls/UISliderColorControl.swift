@@ -27,7 +27,7 @@
 //
 
 import UIKit
-import FlexColorPicker
+
 
 @IBDesignable
 class UISliderColorControl: UISlider, ColorControl {

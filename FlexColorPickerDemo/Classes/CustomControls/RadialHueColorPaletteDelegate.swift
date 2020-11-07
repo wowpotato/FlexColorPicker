@@ -26,7 +26,7 @@
 //  SOFTWARE.
 //
 
-import FlexColorPicker
+import UIKit
 
 //This class has some of code common with RadialHSBPalette but is it not its specialization so subclassing it would be incorrect object model
 class RadialHueColorPaletteDelegate: ColorPaletteDelegate {
@@ -129,14 +129,3 @@ class RadialHueColorPaletteDelegate: ColorPaletteDelegate {
     }
 }
 
-extension CGPoint {
-    func distanceTo(x: CGFloat, y: CGFloat) -> CGFloat {
-        let dx = self.x - x
-        let dy = self.y - y
-        return sqrt(dx * dx + dy * dy)
-    }
-
-    func distance(to point: CGPoint) -> CGFloat {
-        return distanceTo(x: point.x, y: point.y)
-    }
-}
