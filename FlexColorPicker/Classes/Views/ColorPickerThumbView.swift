@@ -28,7 +28,7 @@
 
 import UIKit
 
-private let colorPickerThumbViewDiameter: CGFloat = 30
+private let colorPickerThumbViewDiameter: CGFloat = 34
 private let defaultWideBorderWidth: CGFloat = 0.5
 private let defaultExpandedUpscaleRatio: CGFloat = 1.6
 private let expansionAnimationDuration = 0.3
@@ -54,7 +54,7 @@ open class ColorPickerThumbView: UIViewWithCommonInit {
     /// Whether to show percentage label above the thumb view.
     public var showPercentage: Bool = false
     /// Whether the thumb view should be expanded when user is interacting with it.
-    public var expandOnTap: Bool = true
+    public var expandOnTap: Bool = false
     var delegate: LimitedGestureViewDelegate? {
         didSet {
             (borderView as? LimitedGestureCircleView)?.delegate = delegate
@@ -103,15 +103,18 @@ open class ColorPickerThumbView: UIViewWithCommonInit {
         percentageLabel.textAlignment = .center
         percentageLabel.alpha = 0
         clipsToBounds = false // required for the text label to be displayed ourside of bounds
-        borderView.backgroundColor = UIColor.colorPickerThumbViewWideBorderColor
+//        borderView.backgroundColor = UIColor.colorPickerThumbViewWideBorderColor
         (borderView as? LimitedGestureCircleView)?.delegate = delegate
         (colorView as? LimitedGestureCircleView)?.delegate = delegate
         setColor(color, animateBorderColor: false)
+        
+        self.colorView.backgroundColor = .clear
+        self.borderView.backgroundColor = .clear
     }
 
     open func setColor(_ color: UIColor, animateBorderColor: Bool) {
         self.color = color
-        colorView.backgroundColor = color
+//        colorView.backgroundColor = color
         setDarkBorderIfNeeded(animated: animateBorderColor)
     }
 
@@ -156,7 +159,7 @@ extension ColorPickerThumbView {
 
     private func setWideBorderColors(_ isDark: Bool) {
         self.borderView.viewBorderColor = isDark ? UIColor.colorPickerBorderColor : UIColor.colorPickerLightBorderColor
-        self.borderView.backgroundColor = isDark ? UIColor.colorPickerThumbViewWideBorderDarkColor : UIColor.colorPickerThumbViewWideBorderColor
+//        self.borderView.backgroundColor = isDark ? UIColor.colorPickerThumbViewWideBorderDarkColor : UIColor.colorPickerThumbViewWideBorderColor
     }
 }
 

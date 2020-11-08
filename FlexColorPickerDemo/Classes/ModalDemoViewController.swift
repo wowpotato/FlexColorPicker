@@ -34,6 +34,7 @@ class ModalDemoViewController: DefaultColorPickerViewController {
         super.viewDidLoad()
         selectedColor = pickedColor
         self.delegate = self
+        self.view.backgroundColor = .black
     }
 
     @IBAction func donePressed(_ sender: Any) {
